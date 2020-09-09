@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        setTimeout(function () {
+            console.log("1")
+            
+          })
+        new Promise(function (resolve,reject) {
+            console.log(2)
+            resolve(3)
+          }).then(val=>{
+              console.log(val)
+          },
+          reason=>{}).then(
+              val=>{
+                  console.log(4)
+              },
+              reason=>{}
+
+          )
+          console.log(5)
+
+
+
+    </script>
+</body>
+</html>
