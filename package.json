@@ -1,0 +1,24 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/StrangeSugar/test_code.git",
+  "author": "Strange <strange@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StrangeSugar/test_code/issues"
+  },
+  "homepage": "https://github.com/StrangeSugar/test_code#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.5"
+  }
+}
