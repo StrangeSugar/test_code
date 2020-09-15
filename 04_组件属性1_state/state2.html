@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <title>status</title>
+</head>
+<body>
+    <div id = "box"></div>
+     <!--引入react核心库-->
+  <script type="text/javascript" src="../js/react.development.js"></script>
+  <!--引入操作react操作DOM库-->
+  <script type="text/javascript" src="../js/react-dom.development.js"></script>
+  <!--引入babel-->
+  <script type="text/javascript" src="../js/babel.min.js"></script>
+  <script type="text/babel">
+class Weather extends React.Component{
+    constructor(a){
+        super(a)
+        this.state = {isHot:false}
+
+    }
+    state = this.state
+    render(){
+        let {isHot} = state
+        return <h1 onClick = {change}>今天天气很{isHot ? "炎热":"凉爽"}</h1>
+    }
+   
+}
+
+let weather = ReactDOM.render(<Weather/>,document.getElementById("box"))
+
+function change(){
+    console.log(weather.state.isHot);
+    weather.setState({isHot:!weather.state.isHot})
+    console.log(weather.state.isHot);
+    
+
+}
+
+</script>
+    
+</body>
+</html>
