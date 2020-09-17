@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>受控组件</title>
+</head>
+<body>
+  <div id="example"></div>
+  <!--引入react核心库-->
+<script type="text/javascript" src="../js/react.development.js"></script>
+<!--引入操作react操作DOM库-->
+<script type="text/javascript" src="../js/react-dom.development.js"></script>
+<!--引入babel-->
+<script type="text/javascript" src="../js/babel.min.js"></script>
+<script type="text/babel">
+class Login extends React.Component{
+  state = {
+    password:""
+  }
+  changeHandel=(e)=>{
+    this.setState({password:e.target.value})
+
+  }
+  onSubmit= (event)=>{
+    event.preventDefault()
+    let {password} =this.state
+    console.log(this.state);
+    let {userName} =this.refs
+
+    alert(`用户名是：${userName.value}，密码是${password}`)
+  }
+  render (){
+    return (
+      <form action="http://www.baidu.com" onSubmit = {this.onSubmit}>
+        用户名：  <input type="text" ref="userName"/>
+        密码：<input type="password" ref= "userPassword" onChange = {this.changeHandel}/>
+       
+        <button>提交</button>
+        </form>
+    )
+  }
+
+}
+
+ReactDOM.render(<Login/>,document.getElementById("example"))
+
+
+</script>
+  
+</body>
+</html>
